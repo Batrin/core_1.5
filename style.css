@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'TT Lakes Regular';
+    src: url('fonts/TTLakes-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes Medium';
+    src: url('fonts/TTLakes-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 200px;
+}
+
+.swiper-slide {
+    background-color: red;
+}
+
+.repair {
+    min-height: 320px;
+    background-color: #F8F8F8;
+}
+
+.repair__header {
+    height: 56px;
+    box-sizing: border-box;
+    width: 100%;
+    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 98.61%);
+    text-transform: uppercase;
+    padding: 16px 16px 16px 32px;
+}
+
+.repair__header h3 {
+    color: #7E7E82;
+    letter-spacing: -0.2px;
+    font-family: 'TT Lakes';
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.repair__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr) );
+    grid-column-gap: 24px;
+    grid-row-gap: 16px;
+    margin: 24px 32px 0 32px;
+    height: 165px;
+    overflow: hidden;
+}
+
+.repair__list li {
+    height: 72px;
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+}
+
+.repair__list li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 16px;
+    justify-content: space-between;
+}
+
+.repair__arrow-icon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 100px;
+    position: relative;
+}
+
+.repair__arrow-icon i {
+    color: #FF3E79;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.repair__brands {
+    padding-bottom: 34px;
+    max-width: 1440px;
+}
+
+.repair__brands button {
+    margin: 24px 0 0 32px;
+}
+
+.repair__brands button span {
+    font-family: "TT Lakes Medium";
+    margin-left: 17px;
+    margin-bottom: 40px;
+}
+
+.repair__brands button:hover {
+    cursor: pointer;
+}
+
+.repair__button--close {
+    display: none;
+}
+
+.repair__button--close img {
+    transform: rotate(180deg);
+}
+
+.mySwiper.show-more .repair__list {
+    height: auto;
+}
+
+.mySwiper.show-more .repair__button {
+    display: none;
+}
+
+.mySwiper.show-more .repair__button--close {
+    display: block;
+}
+
+@media only screen and (min-width:768px) and (max-width: 1119px) {
+    .repair__list {
+        grid-template-columns: repeat( auto-fit, minmax(220px, 1fr) );
+        margin: 24px 24px 0 24px;
+    }
+
+    .repair__list li {
+        width: 220px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 767px) {
+    .repair__list {
+        grid-template-columns: repeat( auto-fit, minmax(240px, 1fr) );
+    }
+
+    .repair__list li {
+        width: 240px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .repair__header {
+        height: 80px;
+        padding: 16px;
+    }
+
+    .mySwiper {
+        margin: 16px 0 16px 0;
+    }
+
+    .swiper {
+        height: 120px !important;
+    }
+
+    .repair__list {
+        all: initial;
+        list-style-type: none;
+        margin-left: 16px;
+    }
+
+    .repair__list li {
+        box-sizing: border-box;
+        width: 240px;
+    }
+
+    .repair {
+        min-height: unset;
+        height: 234px;
+    }
+
+    .swiper-pagination {
+        bottom: unset;
+        top: 90px;
+    }
+}
